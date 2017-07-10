@@ -66,24 +66,35 @@ class CommentCrawler(object):
         comment_list = e_html.xpath('//div[@id="comments"]/div[@class="comment-item"]/div[@class="comment"]/p/text()')
         star_list = e_html.xpath('//div[@id="comments"]/div[@class="comment-item"]/div[@class="comment"]/h3'
                                  '/span[@class="comment-info"]/span[@class="rating"]/@title')
-        comment_time_list = e_html.xpath('//div[@id="comments"]/div[@class="comment-item"]/div[@class=]')
+        comment_time_list = e_html.xpath('//div[@id="comments"]/div[@class="comment-item"]/div[@class="comment"]'
+                                         '/h3/span[@class="comment-info"]/span[@class="comment-time"]/@title')
+        id_list = e_html.xpath('//div[@id="comments"]/div[@class="comment-item"]/div[@class="comment"]/h3'
+                               '/span[@class="comment-info"]/a/text()')
+        id_url_list = e_html.xpath('////div[@id="comments"]/div[@class="comment-item"]/div[@class="comment"]/h3'
+                                   '/span[@class="comment-info"]/a/@href')
+        vote_num_list = e_html.xpath('////div[@id="comments"]/div[@class="comment-item"]/div[@class="comment"]/h3'
+                                     '/span[@class="comment-vote"]/span[@class="votes"]/text()')
 
 
 class DataBase(object):
 
-    def __init__(self, host_name, port_num, user_name, password, db_name):
+    def __init__(self, host_name, port_num, user_name, password, db_name, charset):
         self.host_name = host_name
         self.port_num = port_num
         self.user_name = user_name
         self.password = password
         self.db_name = db_name
+        self.charset = charset
 
     def open_db(self):
         global conn, cursor
-        conn = pymysql.connect(host=self.host_name, port=self.port_num, user=self.user_name,password=self.password, db=self.db_name)
+        conn = pymysql.connect(host=self.host_name, port=self.port_num, user=self.user_name,password=self.password,
+                               db=self.db_name, charset=self.charset)
+
         cursor = conn.cursor()
 
     def get_data(self):
+        get_data_sql = """ SELECT id, page_url  FROM comment_url """
         pass
 
     def save_data(self):
@@ -92,4 +103,11 @@ class DataBase(object):
     def close_db(self):
         cursor.close()
         conn.close()
+
+
+if __name__ == '__main__':
+    page_url =
+    comment_crawler = CommentCrawler(page_url)
+
+
 
