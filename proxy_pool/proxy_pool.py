@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 # num:获取代理的页数
 
 
-class FetchProxy(object):
+class ProxyPool(object):
 
     def __init__(self, num):
         self.num = num
@@ -14,7 +14,7 @@ class FetchProxy(object):
         url = 'http://www.xicidaili.com/nn/{}'
         headers = {
             "User-Agent": "xxx"  
-        }  #  User-Agent: 使用自己浏览器的即可
+        }  # User-Agent: 使用自己浏览器的即可
         proxy_list = []
         for i in range(self.num+1):
             url = url.format(1)
@@ -35,15 +35,9 @@ class FetchProxy(object):
 
         return proxy_list
 
-
-class TestProxy(object):
-
-    def __init__(self, proxy_list):
-        self.proxy_list = proxy_list
-
-    def test_proxy(self):
+    def test_proxy(self, proxy_list):
         test_url = 'https://www.baidu.com'
-        for proxy in self.proxy_list:
+        for proxy in proxy_list:
             response = requests.get(url=test_url, proxies=proxy)
             rsp_code = response.status_code
             print(rsp_code)
@@ -52,11 +46,11 @@ class TestProxy(object):
                     f.write(str(proxy)+'\n')
 
 
+def main():
+    proxy_pool = ProxyPool(num=10)
+    proxy_list = proxy_pool.fetch_proxy()
+    proxy_pool.test_proxy(proxy_list=proxy_list)
+
+
 if __name__ == '__main__':
-    xici_proxy = FetchProxy(num=10)  # num:获取代理的页数，比如1页。
-    proxy_list = xici_proxy.fetch_proxy()
-
-    test_xici_proxy = TestProxy(proxy_list)
-    test_xici_proxy.test_proxy()
-
-
+    main()
