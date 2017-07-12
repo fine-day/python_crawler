@@ -58,8 +58,8 @@ class DataBae(object):
         conn.close()
 
 
-if __name__ == '__main__':
-    db = DataBae(host_name='localhost', port_num=3306, user_name='root', password='root', db_name='douban_movie')
+def main():
+    db = DataBae(host_name='localhost', port_num=3306, user_name='xxx', password='xxx', db_name='douban_movie')
     db.open_db()
     url_list = db.get_data()
 
@@ -70,3 +70,6 @@ if __name__ == '__main__':
     pool.join()
 
     db.close_db()
+
+if __name__ == '__main__':
+    main()
