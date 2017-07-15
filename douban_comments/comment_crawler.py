@@ -95,7 +95,10 @@ class DataBase(object):
 
     def get_data(self):
         get_data_sql = """ SELECT id, page_url  FROM comment_url """
-        pass
+        cursor.excute(get_data_sql)
+        for r in cursor:
+
+
 
     def save_data(self):
         pass
