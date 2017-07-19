@@ -94,11 +94,13 @@ class DataBase(object):
         cursor = conn.cursor()
 
     def get_data(self):
+        # url_list为从数据库中取出爬取页面的url集合
+        url_list = []
         get_data_sql = """ SELECT id, page_url  FROM comment_url """
         cursor.excute(get_data_sql)
         for r in cursor:
-
-
+            url = r[1]
+            url_list.append(url)
 
     def save_data(self):
         pass
