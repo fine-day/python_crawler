@@ -18,7 +18,7 @@ page_headers = {
     'Accept-Language': 'zh-CN,zh;q=0.8',
     'Cache-Control': 'max-age=0',
     'Connection': 'keep-alive',
-    # 'Cookie': 'bid=TW9FfFM6rLw; ct=y; ps=y; ll="118172"; viewed="26274202_26838921_4826033_26468916_3112503_4889838_6789516_26320485"; _is_first_access=user1499699001; _pk_ref.100001.4cf6=%5B%22%22%2C%22%22%2C1499702078%2C%22https%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3D3FV0LKKF2DX8FOdHBO6Gra2ew0o3Lsu_KhJG_9X21fHWFBrdBYG6xm3Hf4UZV-da%26wd%3D%26eqid%3Ddb93902e00025c8c000000025963a339%22%5D; ap=1; ue="chen.v166@gmail.com"; dbcl2="163539032:jmJdIMr8xQc"; ck=HcMH; _vwo_uuid_v2=49BFB964A55588402302EF90DE89BC30|1595871f7f79336105d5709a8b32edf3; _pk_id.100001.4cf6=4e34811c463e9043.1497948489.34.1499702113.1499700129.; _pk_ses.100001.4cf6=*; __utma=30149280.637523572.1496852261.1499698609.1499702078.55; __utmb=30149280.0.10.1499702078; __utmc=30149280; __utmz=30149280.1499702078.55.37.utmcsr=baidu|utmccn=(organic)|utmcmd=organic; __utmv=30149280.16353; __utma=223695111.1940242653.1497948489.1499698609.1499702078.38; __utmb=223695111.0.10.1499702078; __utmc=223695111; __utmz=223695111.1499702078.38.25.utmcsr=baidu|utmccn=(organic)|utmcmd=organic; push_noty_num=0; push_doumail_num=0',
+    'Cookie':'' # 自行设定
     'Host': 'movie.douban.com',
     'Referer': 'https://movie.douban.com/subject/26411410/',
     'Upgrade-Insecure-Requests': '1',
