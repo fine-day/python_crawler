@@ -123,7 +123,6 @@ class DownloadNextPageUrl(object):
 def main():
     # 生成download_next_paged对象
     download_next_page = DownloadNextPageUrl(start_page_url)
-
     page_url = start_page_url
 
     # 当page_url 存在时，获取next_page_url
