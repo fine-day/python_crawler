@@ -35,9 +35,7 @@ u_a_list = [
 ]
 
 # cookie_list
-cookie_list = [
-    'bid=TW9FfFM6rLw; gr_user_id=29061151-bb6d-44cd-ad35-cfa8c44fad9e; ct=y; ps=y; ll="118172"; viewed="26274202_26838921_4826033_26468916_3112503_4889838_6789516_26320485"; ue="1334968325@qq.com"; _vwo_uuid_v2=49BFB964A55588402302EF90DE89BC30|1595871f7f79336105d5709a8b32edf3; _pk_ref.100001.8cb4=%5B%22%22%2C%22%22%2C1499574278%2C%22https%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3Dkvdmirs22OQAj10KSbGstQqMKXoquaLus76T94c1ss3%26wd%3D%26eqid%3De253b57901020fa9000000025961a215%22%5D; __utmt=1; ap=1; dbcl2="163539032:KqcOMIK+2ZU"; ck=QcXf; _pk_id.100001.8cb4=a278823aa2b4b9d9.1493947655.26.1499574533.1499571496.; _pk_ses.100001.8cb4=*; push_noty_num=0; push_doumail_num=0; __utma=30149280.637523572.1496852261.1499574237.1499574278.48; __utmb=30149280.5.10.1499574278; __utmc=30149280; __utmz=30149280.1499574278.48.33.utmcsr=baidu|utmccn=(organic)|utmcmd=organic; __utmv=30149280.16353'
-]
+
 basic_url = 'https://movie.douban.com/subject/26411410/comments'
 start_page_url = 'https://movie.douban.com/subject/26411410/comments?start=5705&limit=20&sort=new_score&status=P'
 
